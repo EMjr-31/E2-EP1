@@ -15,7 +15,8 @@ namespace E2_EP1
     {
          string votos;
          string nombre = "votos.txt";
-         string  ruta = "C:\\Users\\EMjr\\Documents\\Universidad\\Ciclo 02 -2021\\POO\\Examenes\\Examenes\\E2-EP1\\votos.txt";
+        ///Modificar la ruta
+        string ruta = "C:\\Users\\EMjr\\Documents\\Universidad\\Ciclo 02 -2021\\POO\\Examenes\\Examenes\\E2-EP1\\votos.txt";
         
 
         public Ingreso()
@@ -46,11 +47,12 @@ namespace E2_EP1
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ///Ingreso de votos
-            votos = rtxtVotos.Text;
+            votos = rtxtVotos.Text.Replace(" ", String.Empty);
             string[] arreglo = votos.Split(",".ToCharArray(),StringSplitOptions.RemoveEmptyEntries);
             //Verficar datos ingresados
             for (int i=0; i < arreglo.Length; i++)
             {
+
                 if (arreglo[i] != "1" && arreglo[i] != "2" && arreglo[i] != "3" && arreglo[i] != "4")
                 {
                     /*MessageBox.Show(arreglo[i]);*/
