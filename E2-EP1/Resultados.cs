@@ -67,9 +67,6 @@ namespace E2_EP1
             else
             {
                 MessageBox.Show("No se han ingresado votaciones");
-                Form1 menu = new Form1();
-                menu.Visible = true;
-                this.Close();
             }
         }
 

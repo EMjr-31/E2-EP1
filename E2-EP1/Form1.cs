@@ -35,7 +35,7 @@ namespace E2_EP1
         {
             Resultados resul = new Resultados();
             this.Visible = false;
-            resul.Show();
+            resul.Visible = true;
         }
     }
 }
