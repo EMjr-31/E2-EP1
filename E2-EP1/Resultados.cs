@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace E2_EP1
 {
-    public partial class Ingreso : Form
+    public partial class Resultados : Form
     {
-        public Ingreso()
+        public Resultados()
         {
             InitializeComponent();
         }
@@ -22,7 +22,6 @@ namespace E2_EP1
             Form1 menu = new Form1();
             menu.Visible = true;
             this.Close();
-            
         }
     }
 }
