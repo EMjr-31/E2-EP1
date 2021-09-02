@@ -48,25 +48,22 @@ namespace E2_EP1
             ///Ingreso de votos
             votos = rtxtVotos.Text;
             string[] arreglo = votos.Split(",".ToCharArray(),StringSplitOptions.RemoveEmptyEntries);
-            bool estado=true;
-
+            //Verficar datos ingresados
             for (int i=0; i < arreglo.Length; i++)
             {
-                if (arreglo[i] != "1" && arreglo[i] != "2" && arreglo[i] != "3" && arreglo[i] != "5")
+                if (arreglo[i] != "1" && arreglo[i] != "2" && arreglo[i] != "3" && arreglo[i] != "4")
                 {
-                    estado =true;
-                }
-                else {
+                    /*MessageBox.Show(arreglo[i]);*/
                     MessageBox.Show("No se permiten votos diferentes de 1,2,3 o 4");
-                    estado = false;
                     break;
-                }            
+                }
+                if (i== arreglo.Length-1)
+                {
+                    File.WriteAllText(ruta, votos);
+                    MessageBox.Show("Guardado Exitosamente");
+                    rtxtVotos.Text = File.ReadAllText(ruta);
+                }
             }
-            if (estado == true) {
-            }
-            File.WriteAllText(ruta, votos);
-            MessageBox.Show("Guardado Exitosamente");
-
         }
 
         private void btnVer_Click(object sender, EventArgs e)
