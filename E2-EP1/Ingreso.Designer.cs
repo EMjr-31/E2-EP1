@@ -31,7 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Voto = new System.Windows.Forms.Label();
             this.btnregresar = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxtVotos = new System.Windows.Forms.RichTextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnVer = new System.Windows.Forms.Button();
+            this.btnDescartar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,20 +66,53 @@
             this.btnregresar.UseVisualStyleBackColor = true;
             this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
             // 
-            // richTextBox1
+            // rtxtVotos
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 99);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(382, 214);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.rtxtVotos.Location = new System.Drawing.Point(12, 99);
+            this.rtxtVotos.Name = "rtxtVotos";
+            this.rtxtVotos.Size = new System.Drawing.Size(382, 214);
+            this.rtxtVotos.TabIndex = 4;
+            this.rtxtVotos.Text = "";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(420, 180);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(121, 23);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnVer
+            // 
+            this.btnVer.Location = new System.Drawing.Point(420, 97);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(121, 23);
+            this.btnVer.TabIndex = 6;
+            this.btnVer.Text = "Ver votos";
+            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            // 
+            // btnDescartar
+            // 
+            this.btnDescartar.Location = new System.Drawing.Point(420, 139);
+            this.btnDescartar.Name = "btnDescartar";
+            this.btnDescartar.Size = new System.Drawing.Size(121, 23);
+            this.btnDescartar.TabIndex = 7;
+            this.btnDescartar.Text = "Descartar cambios";
+            this.btnDescartar.UseVisualStyleBackColor = true;
+            this.btnDescartar.Click += new System.EventHandler(this.btnDescartar_Click);
             // 
             // Ingreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 333);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.btnDescartar);
+            this.Controls.Add(this.btnVer);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.rtxtVotos);
             this.Controls.Add(this.btnregresar);
             this.Controls.Add(this.Voto);
             this.Controls.Add(this.label1);
@@ -92,6 +128,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Voto;
         private System.Windows.Forms.Button btnregresar;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxtVotos;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnVer;
+        private System.Windows.Forms.Button btnDescartar;
     }
 }
